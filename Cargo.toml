@@ -16,7 +16,7 @@ st7735-lcd = ["dep:st7735-lcd"]
 st7735-lcd-doublebuffering = ["dep:st7735-lcd-doublebuffering"]
 
 [dependencies]
-ecos-ssc1 = { version = "0", features = [] }
+ecos-ssc1 = { version = "0.1.2", features = [] }
 embedded-hal = "1.0"
 st7735-lcd-doublebuffering = { version = "0.1", optional = true }
 heapless = "0.9"
