@@ -1,0 +1,26 @@
+[package]
+name = "ecos-ebui"
+version = "0.1.0"
+edition = "2024"
+build = "build.rs"
+license = "MIT OR Apache-2.0"
+description = "embedded-hal st7735 ui support for ecos"
+
+[package.metadata.ecos]
+ecos_project_root = true
+ecos_flash_cmd_to = "/mnt/d"
+
+[features]
+default = ["st7735-lcd"]
+st7735-lcd = ["dep:st7735-lcd"]
+st7735-lcd-doublebuffering = ["dep:st7735-lcd-doublebuffering"]
+
+[dependencies]
+ecos-ssc1 = { path = "../ecos_ssc1", features = ["alloc"] }
+embedded-hal = "1.0"
+st7735-lcd-doublebuffering = { version = "0.1", optional = true }
+heapless = "0.9"
+st7735-lcd = { version = "0.10", optional = true }
+
+[build-dependencies]
+cc = "1"
