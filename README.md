@@ -4,7 +4,7 @@
 
 示例程序位于example
 
-其中，实现了ebd-hal层，所有兼容ebd的显示器（drawable trait）都可以直接接入ebd-graphics方便的绘制图形
+其中，实现了ebd-hal层，所有兼容ebd的显示器（Drawable trait）都可以直接接入ebd-graphics方便的绘制图形
 
 给出了示例的兼容层`st7735`，可以发现就是使用ebd-hal直接包装init即可实现显示
 
